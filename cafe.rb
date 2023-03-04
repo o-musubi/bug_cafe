@@ -16,13 +16,13 @@ FOODS = [
 
 def take_order(menus)
   menus.each.with_index(1) do |menu, i|
-  puts "(#{i})#{menu[:name]}: #{menu[:price]}円"
+    puts "(#{i})#{menu[:name]}: #{menu[:price]}円"
   end
   print '>'
   order_number = (gets.to_i - 1 )
   puts "#{menus[order_number][:name]}(#{menus[order_number][:price]}円)ですね。"
   order_number
-  end
+end
 
 puts 'bugカフェへようこそ！ご注文は？ 番号でどうぞ'
 order1 = take_order(DRINKS)
